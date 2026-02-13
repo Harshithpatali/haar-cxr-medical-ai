@@ -1,0 +1,11 @@
+import yaml
+from typing import Any, Dict
+
+
+def load_config(path: str) -> Dict[str, Any]:
+    """
+    Load YAML configuration file.
+    """
+    with open(path, "r") as f:
+        config = yaml.safe_load(f)
+    return config
