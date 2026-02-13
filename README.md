@@ -1,112 +1,121 @@
-﻿# haar-cxr-medical-ai
-Dual-Branch Spatial + Haar Wavelet Medical AI System for Pneumonia Detection
+# Haar-CXR  
+### Dual-Branch Spatial + Haar Wavelet Medical AI System for Pneumonia Detection  
 
-🔗 Live App:
+<p align="left">
+<img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/PyTorch-DeepLearning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
+<img src="https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/Streamlit-LiveApp-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+<img src="https://img.shields.io/badge/MLflow-ExperimentTracking-0194E2?style=for-the-badge&logo=mlflow&logoColor=white"/>
+</p>
+
+🔗 **Live Application:**  
 https://haar-cxr-medical-ai-jrudfjradkr2zxk2wiu5pm.streamlit.app/
 
-🚀 Why This Project Stands Out
+---
 
-Haar-CXR is not a basic CNN classifier.
+#  Project Overview
 
-It is a production-structured medical AI system that combines:
+**Haar-CXR** is a production-structured medical AI system for pneumonia detection from chest X-ray images.
 
-🧠 Deep Learning (ResNet18)
+Unlike standard CNN classifiers, Haar-CXR integrates:
 
-📊 Signal Processing (Haar Wavelet Transform)
+-  Spatial Deep Learning (ResNet18)
+-  Frequency-Domain Signal Processing (Haar Wavelet Transform)
+-  Feature Fusion Architecture
+-  Statistical Validation
+-  Calibration & Uncertainty Estimation
+-  Explainable AI (Grad-CAM)
+-  MLflow-based experiment tracking
+-  Docker containerization
+-  Streamlit deployment
 
-🔀 Feature Fusion Architecture
+This project demonstrates full ML lifecycle ownership — from research modeling to production deployment.
 
-📈 Statistical Validation
+---
 
-🎯 Calibration & Uncertainty Estimation
-
-🔍 Grad-CAM Explainability
-
-⚙️ MLOps with MLflow
-
-🐳 Docker Deployment
-
-🌐 Live Streamlit Deployment
-
-This project demonstrates:
-
-Medical AI × Signal Processing × Deep Learning × MLOps Engineering
-
-
-
-#Core Technical Highlights
-1️⃣ Dual-Branch Learning
-
-Spatial representation via pretrained ResNet18
-
-Frequency-domain modeling using 2D Haar transform
-
-Fusion of spatial + spectral embeddings
-
-2️⃣ Robust Validation
-
-Stratified 5-Fold Cross Validation
-
-ROC-AUC, F1, Sensitivity, Specificity
-
-Statistical significance testing (t-test)
-
-3️⃣ Calibration & Reliability
-
-Expected Calibration Error (ECE)
-
-Probability alignment validation
-
-Monte Carlo Dropout for predictive uncertainty
-
-4️⃣ Explainable AI
-
-Grad-CAM heatmaps
-
-Wavelet band energy analysis
-
-Confidence scoring
-
-#  System Architecture
+# 🏗 System Architecture
 
 ```mermaid
-graph TD
-    A[Input X-ray] --> B[Spatial Branch: ResNet18]
-    A --> C[Haar Wavelet Transform]
-    C --> D[Frequency Branch: CNN]
-    B --> E[Feature Fusion]
-    D --> E
-    E --> F[Classifier]
-    F --> G[Probability + Uncertainty]
-    F --> H[Grad-CAM + Energy Analysis]
+flowchart LR
+
+A([Chest X-ray Input])
+
+subgraph Spatial Domain
+B[ResNet18 Feature Extractor]
+end
+
+subgraph Frequency Domain
+C[Haar Wavelet Transform]
+D[Frequency CNN]
+end
+
+E[Feature Fusion]
+F[Binary Classifier]
+G[MC Dropout Uncertainty]
+H[Grad-CAM + Energy Analysis]
+
+A --> B
+A --> C
+C --> D
+B --> E
+D --> E
+E --> F
+F --> G
+F --> H
 ```
 
 ---
 
-# 🛠 Tech Stack
+# 🧠 Core Technical Highlights
 
-## Core ML
-- PyTorch
-- Torchvision
-- PyWavelets
-- Scikit-learn
-- SciPy
+## 🔹 Dual-Branch Learning
+- Spatial representation via pretrained ResNet18  
+- Frequency modeling via 2D Haar wavelet transform  
+- Feature-level fusion of spatial and spectral embeddings  
 
-## Explainability & Analysis
-- OpenCV
-- Matplotlib
-- Custom Grad-CAM
-- MC Dropout
+## 🔹 Robust Validation
+- Stratified 5-Fold Cross-Validation  
+- ROC-AUC, Accuracy, Precision, Recall, F1-score  
+- Sensitivity & Specificity  
+- Statistical significance testing (t-test on wavelet energy)  
 
-## MLOps & Deployment
-- MLflow (Experiment Tracking)
-- Streamlit (UI)
-- Docker (Containerization)
-- Virtualenv
+## 🔹 Calibration & Reliability
+- Expected Calibration Error (ECE)  
+- Monte Carlo Dropout for predictive uncertainty  
+- Confidence-aware probability outputs  
+
+## 🔹 Explainable AI
+- Grad-CAM heatmaps for localized pneumonia regions  
+- Wavelet band energy analysis  
+- Uncertainty-aware predictions  
 
 ---
 
-#  Project Structure
+# 🧠 Core ML Stack
+
+<p align="left">
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
+<img src="https://img.shields.io/badge/Torchvision-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
+<img src="https://img.shields.io/badge/PyWavelets-4B8BBE?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+<img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white"/>
+</p>
+
+---
+
+# ⚙️ MLOps & Deployment
+
+<p align="left">
+<img src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+<img src="https://img.shields.io/badge/Virtualenv-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+</p>
+
+---
+
+# 📁 Production-Grade Project Structure
 
 ```
 haar_cxr/
@@ -129,34 +138,40 @@ haar_cxr/
 
 ---
 
-#  Running the Project
+# ▶️ How to Run
 
-### Train (5-Fold CV)
-
+### Train with Cross Validation
 ```bash
 python cross_validate.py
 ```
 
-### Start MLflow
-
+### Start MLflow UI
 ```bash
 mlflow ui
 ```
 
-### Launch App
-
+### Launch Streamlit App
 ```bash
 streamlit run app.py
 ```
 
----
-
-#  Docker Deployment
-
+### Docker Deployment
 ```bash
 docker build -t haar-cxr .
 docker run -p 8501:8501 haar-cxr
 ```
+
+---
+
+# 💡 What This Project Demonstrates
+
+- Advanced multi-branch architecture design  
+- Integration of signal processing into deep learning pipelines  
+- Model calibration & uncertainty quantification  
+- Explainable AI for medical compliance  
+- Modular, production-ready ML code structure  
+- End-to-end ML lifecycle ownership  
+- Deployment-ready containerized system  
 
 ---
 
@@ -166,31 +181,8 @@ This system is for research purposes only and is not intended for clinical diagn
 
 ---
 
-#  Project Significance
+# 👨‍💻 Author
 
-Haar-CXR demonstrates:
-
-- Multi-domain feature learning
-- Frequency-domain medical modeling
-- Statistical validation
-- Uncertainty-aware predictions
-- Explainable AI compliance
-- Ensemble robustness
-- Production MLOps practices
-
-This project bridges:
-
-Medical AI × Signal Processing × Deep Learning × MLOps
-
----
-
-##  Author
-
-Harshith Devraj  
-Applied Mathematics & Computing  
-Machine Learning | Medical AI | Signal Processing
-
-
-
-
-
+**Harshith Devraj**  
+M.Sc. Applied Mathematics & Computing  
+Machine Learning | Medical AI | Signal Processing  
