@@ -13,3 +13,4 @@ streamlit
 pillow
 tqdm
 pyyaml
+opencv-python-headless
