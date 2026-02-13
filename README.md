@@ -32,23 +32,9 @@ This project demonstrates:
 
 Medical AI × Signal Processing × Deep Learning × MLOps Engineering
 
-🏗 System Architecture
-Input X-ray
-      │
-      ├── Spatial Branch (ResNet18)
-      │
-      ├── Haar Wavelet Transform
-      │        └── Frequency CNN Branch
-      │
-      ├── Feature Fusion
-      │
-      ├── Binary Classifier
-      │
-      ├── Uncertainty (MC Dropout)
-      │
-      └── Explainability (Grad-CAM + Wavelet Energy)
 
-🧠 Core Technical Highlights
+
+#Core Technical Highlights
 1️⃣ Dual-Branch Learning
 
 Spatial representation via pretrained ResNet18
@@ -203,6 +189,7 @@ Medical AI × Signal Processing × Deep Learning × MLOps
 Harshith Devraj  
 Applied Mathematics & Computing  
 Machine Learning | Medical AI | Signal Processing
+
 
 
 
