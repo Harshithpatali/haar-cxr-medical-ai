@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 **Haar-CXR** is a research-grade medical AI system for high-accuracy pneumonia detection from chest X-ray images.
 
@@ -22,7 +22,7 @@ The system is modular, reproducible, explainable, and production-ready.
 
 ---
 
-# 🧠 Mathematical Formulation
+#  Mathematical Formulation
 
 ## 1️⃣ Problem Definition
 
@@ -230,7 +230,7 @@ C = 1 - \sigma
 
 ---
 
-# 🔥 Explainability & Signal Analysis
+#  Explainability & Signal Analysis
 
 ## Grad-CAM
 
@@ -266,7 +266,7 @@ If \(p < 0.05\), the frequency band shows significant difference.
 
 ---
 
-# 🏗 System Architecture
+#  System Architecture
 
 ```mermaid
 graph TD
@@ -305,7 +305,7 @@ graph TD
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```
 haar_cxr/
@@ -328,7 +328,7 @@ haar_cxr/
 
 ---
 
-# 🚀 Running the Project
+#  Running the Project
 
 ### Train (5-Fold CV)
 
@@ -350,7 +350,7 @@ streamlit run app.py
 
 ---
 
-# 🐳 Docker Deployment
+#  Docker Deployment
 
 ```bash
 docker build -t haar-cxr .
@@ -365,7 +365,7 @@ This system is for research purposes only and is not intended for clinical diagn
 
 ---
 
-# 🎯 Project Significance
+#  Project Significance
 
 Haar-CXR demonstrates:
 
@@ -383,8 +383,9 @@ Medical AI × Signal Processing × Deep Learning × MLOps
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 Harshith Devraj  
 Applied Mathematics & Computing  
 Machine Learning | Medical AI | Signal Processing
+
