@@ -1,16 +1,13 @@
-torch
-torchvision
+streamlit==1.32.0
+altair==4.2.2
+
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
+
 numpy
-pandas
 scikit-learn
 scipy
-opencv-python
 pywavelets
-mlflow
-matplotlib
-seaborn
-streamlit
-pillow
-tqdm
-pyyaml
 opencv-python-headless
+pillow
+matplotlib
