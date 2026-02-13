@@ -25,7 +25,6 @@ mlflow:
   tracking_uri: file:./mlruns
   experiment_name: Haar_CXR_Pneumonia
 
-deployment:
-  model_path: checkpoints/fold_2.pt
+
 
 
