@@ -11,3 +11,4 @@ pywavelets
 opencv-python-headless
 pillow
 matplotlib
+PyYAML
